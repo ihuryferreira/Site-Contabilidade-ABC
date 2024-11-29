@@ -1,0 +1,228 @@
+/* Reset de CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho
+--------------------------------------------- */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 20px;
+  height: 100%;
+  background-color: #e4e4e9;
+}
+
+/* Texto em negrito */
+strong {
+  font-size: 18pt;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 32px;
+  color: #050599;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  gap: 0.6rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 1px solid #0000ff;
+  color: #0000ff;
+  font-size: 14px;
+}
+
+a:hover {
+  color: #050599;
+  border-color: #050599;
+}
+
+/* Seções */
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+/* Imagens */
+img {
+  width: 250px;
+  height: 250px;
+}
+
+/* Títulos */
+h1 {
+  padding-top: 1rem;
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 30px;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Parágrafos */
+p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: sans-serif;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+/* Listas */
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+/* Áreas de texto */
+textarea {
+  height: 180px;
+}
+
+/* Botões de envio */
+button[type="submit"] {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #3980dd;
+  color: #ffffff;
+  border: none;
+  border-radius: 22px;
+  box-shadow: 2px 3px 4px #000;
+  filter: drop-shadow(0px 0px 3px #18191ad8);
+}
+
+button[type="submit"]:active,
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #0b0bb1;
+  outline: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: #e4e4e9;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Media Queries para telas pequenas */
+@media screen and (min-width: 375px) {
+  strong {
+    font-size: 22pt;
+  }
+  img {
+    width: 320px;
+    height: 320px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 16px;
+    flex: 0;
+  }
+}
+
+/* Media Queries para telas médias */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  a {
+    font-size: 22px;
+  }
+  img {
+    width: 420px;
+    height: 420px;
+  }
+  h1 {
+    font-size: 30pt;
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 25pt;
+  }
+  p {
+    max-width: 710px;
+    font-size: 18px;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 170%;
+  }
+  ul {
+    flex: 1 0 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "item1 item2" "item3 item4" "item5 item5";
+    align-items: center;
+    list-style: none;
+  }
+  li {
+    padding: 20px;
+    text-align: center;
+    background-color: #245ba3;
+    color: #eceaea;
+    border: 1px solid #000;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+  .item1 {
+    grid-area: item1;
+  }
+  .item2 {
+    grid-area: item2;
+  }
+  .item3 {
+    grid-area: item3;
+  }
+  .item4 {
+    grid-area: item4;
+  }
+  .item5 {
+    grid-area: item5;
+  }
+}
